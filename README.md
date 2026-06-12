@@ -101,7 +101,7 @@ open a machine terminal in your `Repos` folder:
 
 ```bash
 # Replace username with YOUR GitHub username.
-git clone https://github.com/username/streaming-05-storage
+git clone https://github.com/bfuemmeler/streaming-05-storage
 
 cd streaming-05-storage
 code .
@@ -172,7 +172,7 @@ bin/kafka-topics.sh --create \
   --bootstrap-server localhost:9092 \
   --partitions 1 \
   --replication-factor 1 \
-  --topic streaming-05-storage-case
+  --topic streaming-05-storage-fuemmeler
 ```
 
 ### In VS Code Terminal 3: Run Project and Producer (producer)
@@ -199,7 +199,7 @@ uvx pre-commit run --all-files
 
 # run the producer
 clear
-uv run python -m streaming.kafka_producer_case
+uv run python -m streaming.kafka_producer_fuemmeler
 
 # do chores
 uv run ruff format .
@@ -223,7 +223,7 @@ Clear the terminal, then start the consumer.
 
 ```shell
 clear
-uv run python -m streaming.kafka_consumer_case
+uv run python -m streaming.kafka_consumer_fuemmeler
 ```
 
 To start fresh, see
@@ -366,3 +366,21 @@ Look for the text `db`:
 | C05 | Consumer executed successfully!
 | C05 | ========================
 ```
+
+## Update Authorship
+
+# Update ReadMe, zensical. Update About section on repo main page
+
+## Make a technical modification
+
+- In the .env file, make a few small modifications.
+- Change Kafka topic to streaming-05-storage-fuemmeler
+- Change Message count to 5 and Message Interval Seconds to 4
+
+## Apply a new skill
+
+- updated to change "total" to "subtotal" to see the visualizations change
+- required an update to live_visualizations_fuemmeler.py file
+- required an update to data_contract_fuemmeler.py file
+- Success resulted in new output file sales_chart_fuemmeler,png that created
+  a chart showing sales subtotals.
